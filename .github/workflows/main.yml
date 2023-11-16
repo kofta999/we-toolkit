@@ -20,7 +20,11 @@ jobs:
         name: Install dependencies
         run: |
           bun install
-      - id: test
-        name: Run lint and build
+      - id: lint
+        name: Lint code
         run: |
-          bun run lint && bun run build
+          bun run lint
+      - id: build
+        name: Build
+        run: |
+          bun run build
