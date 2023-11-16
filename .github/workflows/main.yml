@@ -23,4 +23,4 @@ jobs:
       - id: test
         name: Run lint and build
         run: |
-          bun lint && bun build
+          bun run lint && bun run build
