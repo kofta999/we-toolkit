@@ -1,0 +1,29 @@
+{
+  "name": "we-toolkit",
+  "version": "0.0.1",
+  "description": "A set of utility functions to simplify dealing with WE's (Telecom Egypt) API",
+  "scripts": {
+    "build": "tsup",
+    "lint": "tsc"
+  },
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "bun-types": "latest",
+    "tsup": "^7.2.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
