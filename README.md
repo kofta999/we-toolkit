@@ -1,17 +1,51 @@
 # we-toolkit
 
-A set of utility functions to simplify dealing with WE's (Telecom Egypt) API
+we-toolkit is a package that provides easy access to Telecom Egypt's API.
 
-To install dependencies:
+## Installation
 
-```bash
-bun install
-```
-
-To run:
+Use the package manager [npm](https://www.npmjs.com/) to install we-toolkit.
 
 ```bash
-bun run index.js
+npm install we-toolkit
 ```
 
-This project was created using `bun init` in bun v1.0.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Usage
+
+```javascript
+const { getBalance, getUsage, login } = require("we-toolkit");
+
+// Use the functions provided by the package
+// For example:
+let authData = login("number", "password");
+let balance = getBalance(authData);
+let usage = getUsage(authData);
+```
+
+## API
+
+### `login(number, password)`
+
+Logs in to the service and returns an `authData` object.
+
+### `getBalance(authData)`
+
+Returns the balance for the authenticated user.
+
+### `getUsage(authData)`
+
+Returns the data usage for the authenticated user.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Acknowledgements
+
+- Password encryption helper function is made by: [Ahmed basset](https://github.com/aabdulbasset)
+- Login functionality is made by: [Abdelrahman Tarek
+  ](https://github.com/abdelrahman-tarek-0)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
